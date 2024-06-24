@@ -1,0 +1,217 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2,
+h3 {
+  font-size: 2.5em;
+}
+
+h3 {
+  text-align: center;
+}
+
+label {
+  font-weight: 700;
+  font-style: italic;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; 
+  color: white;
+  height: 100px; 
+}
+
+.marco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.temario,
+.proyectos {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.grupBtn {
+  padding: 50px 20%;
+}
+
+.btnApp {
+  color: white;
+  margin: 5px;
+  padding: 8px 20px;
+  border: 1px solid rgb(5, 72, 5);
+  outline: none;
+  background-color: rgb(5, 72, 5);
+  font-size: 1.2em;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s ease;
+}
+
+.btnApp:hover {
+  background-color: rgb(0, 50, 0); }
+
+.addBtn {
+  background-color: rgb(43, 79, 194);
+  color: white;
+  padding: 3px 5px;
+  border: none;
+  margin-left: 20%;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.addBtn:hover {
+  background-color: rgb(55, 102, 255);
+}
+
+.btnEdid,
+.btnShow,
+.btnDel {
+  background-color: transparent;
+  color: black;
+  padding: 1px 1px;
+  border: 0.4px solid cornsilk;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btnEdid:hover,
+.btnShow:hover,
+.btnDel:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pageSice {
+  display: flex;
+  align-items: center;
+}
+
+.pagination ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination li {
+  padding: 5px 10px;
+  background-color: rgb(5, 78, 124);
+  background: linear-gradient(to right, #5fa2ff, #867bfe);
+  margin: 0 5px;
+  border: 1px solid rgb(5, 78, 124);
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination li:hover {
+  background-color: rgb(0, 70, 130); 
+}
+
+.pagination li.active {
+  background-color: #0a0346; 
+}
+
+.buttonPagination {
+  display: flex;
+  align-items: center;
+  padding-right: 80px;
+}
+
+.btnPagination {
+  color: black;
+  background-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btnPagination:hover {
+  background-color: rgb(229, 231, 232);
+}
+
+.textCenter {
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 100px;
+}
+
+.tittle-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.seatch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tittle {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .temario,
+  .proyectos {
+    width: 100%;
+  }
+
+  .btnApp,
+  .addBtn,
+  .btnEdid,
+  .btnShow,
+  .btnDel,
+  .btnPagination {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pageSice {
+    margin-bottom: 10px;
+  }
+}
