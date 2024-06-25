@@ -94,7 +94,7 @@ function Menu() {
           ]
         : [
             { title: "Inicio Sesión", route: "/login" },
-            { title: "Registro", route: "/register" },
+            { title: "Registro", route: "/register",allowedRoles: ["isAdmin"] } ,
           ],
       allowedRoles: ["isAdmin", "isStudent", "isTeacher", "guest"], 
     }
