@@ -1,17 +1,20 @@
 const mongoose = require("mongoose");
 const path = require("path");
+const { port, host, user, password, database, uri } = require('./config')
 require("dotenv").config({
   path: path.join(__dirname, "../envirome/devEnvirome.env"),
 });
 
-const dbmonto_host = process.env.DB_MONGO_HOST;
-const dbmongo_port = process.env.DB_PORT
-const dbmongo_db = process.env.DB_DATABASE;
+const dbmongo_host = host;
+const dbmongo_port = port
+const dbmongo_db = database;
 
+let MONGODB_URL = "mongodb://" + dbmongo_host + ":" + dbmongo_port + "/" + dbmongo_db;
 
- 
+ if(uri){
+   MONGODB_URL = uri;
+ }
 
- const MONGODB_URL = "mongodb://" + dbmonto_host + ":" + dbmongo_port + "/" + dbmongo_db;
 
 mongoose
   .connect(MONGODB_URL, {})

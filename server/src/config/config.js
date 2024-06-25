@@ -1,4 +1,3 @@
-
 const path = require("path");
 
 require("dotenv").config({
@@ -9,6 +8,7 @@ let host = "";
 let user = "";
 let password = "";
 let database = "";
+let uri = "";
 if (process.env.NODE_ENV === "Desarrollo") {
   port = process.env.DB_PORT;
   host = process.env.DB_HOST;
@@ -23,6 +23,10 @@ host = process.env.DB_HOST_PROD;
 user = process.env.DB_USER_PROD;
 password = process.env.DB_PASSWORD_PROD;
 database = process.env.DB_DATABASE_PROD;
+
+if(process.env.DB_MONGO_URI_PROD){
+  uri = process.env.DB_MONGO_URI_PROD
+}
 
 
 const dialect = "mysql";
@@ -40,4 +44,5 @@ module.exports = {
   database,
   dialect,
   pool,
+  uri
 };
