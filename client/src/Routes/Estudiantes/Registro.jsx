@@ -11,6 +11,7 @@ export default function Student({ title }) {
   const edit = false;
   const student = [];
   const { HandleNivelClose } = useAppContext();
+  const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
   const api = `${hostServer}/api/v3/student`;
   const [error, setError] = useState(false);
   const initialForm = {
