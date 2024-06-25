@@ -122,7 +122,8 @@ export default function VerCurso({ curso }) {
   }, [data]);
 
   const getTeachers = async () => {
-    const url = "http://localhost:5000/api/v3/teachers";
+    const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
+    const url = `${hostServer}/api/v3/teachers`;
     const response = await fetch(url);
     const responseData = await response.json();
     if (async () => await responseData.data) {

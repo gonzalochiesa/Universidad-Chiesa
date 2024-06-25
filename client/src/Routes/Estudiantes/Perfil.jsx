@@ -10,7 +10,7 @@ import validationSchema from "../../componets/services/validationSchema";
 
 export default function Perfil({ title }) {
   const { HandleNivelClose } = useAppContext();
-  const api = "http://localhost:5000/api/student";
+  const api = `${hostServer}/api/v3/student`;   
   const [error, setError] = useState(false);
   const [edit, setEdit] = useState(true);
   const [student, setStudent] = useState({});
@@ -79,7 +79,8 @@ export default function Perfil({ title }) {
   };
 
   const getStudent = async (event) => {
-    let url = `http://localhost:5000/api/studentdni/${event.target.value}`;
+    const hostServer = import.meta.env.VITE_REACT_APP_SERVER_HOST;
+    let url = `${hostServer}/api/v3/student/dni/${event.target.value}`;
     const responseData = await getData(url);
     if (async () => await responseData) {
       setStudent(responseData?.data.data);

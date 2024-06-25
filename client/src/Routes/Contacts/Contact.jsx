@@ -103,7 +103,6 @@ export default function Contact({ contact, edit, riviewList }) {
   const getCourses = async () => {
     const url = `${hostServer}/api/v3/courses`;
 
-    // let url = "http://localhost:5000/api/";
     let response = await fetch(url);
     let responseCurso = await response.json();
     if (responseCurso) {

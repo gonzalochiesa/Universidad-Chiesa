@@ -11,7 +11,7 @@ export default function Student({ title }) {
   const edit = false;
   const student = [];
   const { HandleNivelClose } = useAppContext();
-  const api = "http://localhost:5000/api/student";
+  const api = `${hostServer}/api/v3/student`;
   const [error, setError] = useState(false);
   const initialForm = {
     id: student ? student.id : "",
