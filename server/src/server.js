@@ -14,7 +14,8 @@ require("./config/configMongoDB.js");
 app.use(
   cors({
     origin: [
-      "https://master--universidad-chiesa.netlify.app/"
+      "https://master--universidad-chiesa.netlify.app/",
+      "https://667a1003125f350008844ced--universidad-chiesa.netlify.app/"
     ],
     credentials: true,
   })
